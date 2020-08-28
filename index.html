@@ -1,0 +1,25 @@
+<html><head><title>Сайт </title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+</head>
+<BODY>
+
+<div id="app">
+<p>Имя: Tom Возраст 26</p>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script id="page3" type="text/x-template">
+    <div>
+        <div><p>Имя: {{name.replace(/[^a-zA-Z]/g, "")}}   Возраст {{age.replace(/[^0-9]/g, "")}}</p></div>
+		<p>Имя: {{name}}   Возраст {{age}}</p>
+    </div>
+</script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {name:'Tom1', age:'25year'},
+        template: '#page3'
+    });
+</script>
+
+</body></html>
